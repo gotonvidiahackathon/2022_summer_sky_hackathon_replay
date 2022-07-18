@@ -16,7 +16,7 @@
 **3.TTS**
 
 ## 1.安装环境
-[**ubuntu18.04+cudatoolkit11.0+cudnn8.0+tensorrt7.1**](https://github.com/gotonvidiahackathon/2022_summer_sky_hackathon_replay/blob/main/config_environment/config_environment.md)
+[**ubuntu18.04+cudatoolkit11.0+cudnn8.0+tensorrt7.1**](https://github.com/gotonvidiahackathon/2022_summer_sky_hackathon_replay/blob/main/config_environment/README.MD)
 
 由于没钱买jetson nano，只能在装系统的时候模拟jetson nano的环境。本次比赛中nano的tensorRT环境为7.1.3,ubuntu最高支持18.04，最终环境为：\
 **ubuntu18.04+cudatoolkit11.0+cudnn8.0+tensorrt7.1**\
