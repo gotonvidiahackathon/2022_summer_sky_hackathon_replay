@@ -63,7 +63,7 @@ sudo /etc/init.d/ssh restart
 之前通过ppa安装的，卸载如下：
 sudo apt-get remove --purge nvidia*
 以前是通过runfile安装的，卸载如下：
-sudo ./NVIDIA-Linux-x86_64-384.59.run --uninstall
+sudo ./NVIDIA-Linux-x86_64-384.59.run --uninstall #./..为安装时的runfile
 ```
 2. 安装驱动\
 和驱动配套的cuda版本见[官网](https://docs.nvidia.com/cuda/cuda-toolkit-release-notes/index.html)，记得根据自己想要装的cuda版本配置驱动版本。
