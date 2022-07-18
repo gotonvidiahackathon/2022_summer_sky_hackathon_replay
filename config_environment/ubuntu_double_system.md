@@ -66,7 +66,7 @@ sudo apt-get remove --purge nvidia*
 sudo ./NVIDIA-Linux-x86_64-384.59.run --uninstall
 ```
 2. 安装驱动\
-&emsp;&emsp;和驱动配套的cuda版本见[官网](https://docs.nvidia.com/cuda/cuda-toolkit-release-notes/index.html)，记得根据自己想要装的cuda版本配置驱动版本。
+和驱动配套的cuda版本见[官网](https://docs.nvidia.com/cuda/cuda-toolkit-release-notes/index.html)，记得根据自己想要装的cuda版本配置驱动版本。
 ```
 sudo apt-get install software-properties-common
 sudo add-apt-repository ppa:graphics-drivers/ppa
