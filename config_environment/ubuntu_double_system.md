@@ -27,7 +27,11 @@ by 宋尧哲
 4). 不想更改数据的盘不要动。
 ### 2.3 安装好之后一些基础配置
 #### 2.3.1 换源
-&emsp;&emsp;我换了之后装驱动以及其他软件反而出了一些问题，以及默认的源并不是很卡，所以这里不详述了
+&emsp;&emsp;我换了之后装驱动以及其他软件反而出了一些问题，以及默认的源并不是很卡，所以这里不详述了,所以直接更新就行。理论上前面连接了wifi并且勾选了自动更新后这里是不需要的，保险起见可以试一下，会发现确实没有更新库。
+```
+sudo apt-get update
+sudo apt-get upgrade
+```
 #### 2.3.2 安装输入法
 1. 打开language support， 这时候会自动弹出窗口让安装依赖，直接安装就好了。
 2. install/remove languages...打开，看下chinese（simplified）有没有勾选，没有的话选上，确认让自动安装依赖
@@ -37,8 +41,38 @@ sudo apt install ibus
 sudo apt install ibus-gtk ibus-gtk3
 sudo apt install ibus-pinyin
 ```
-4. 重启。设置里打开region & language。如果是ubuntu18.04可以点下面加号添加chinese--chinese（intellegent pinyin）然后win+空格可以切换输入法使用了。如果是ubuntu20.0.4，settings--keyboard里可以找到这个设置。
+4. 重启。设置里打开region & language。如果是ubuntu18.04可以点下面加号添加chinese--chinese（intellegent pinyin）然后win+空格可以切换输入法使用了。(如果是ubuntu20.0.4，settings--keyboard里可以找到这个设置。)
+5. 到最后一步，settings -- keyboard -- input sources +号 -- 添加中文
+#### 2.3.3 安装ssh
+1. ifconfig查看IP，若报错显示没有net-tools，则根据报错提示命令安装
+```
+sudo apt install openssh-server
+sudo apt install openssh-client
+sudo nano /etc/ssh/ssh_config
+```
+2. 在跳出的窗口中，去掉PasswordAuthentication yes前面的#号，保存退出(ctrl+s--ctrl+x)
 
+3. 重启ssh
+```
+sudo /etc/init.d/ssh restart
+```
+## 3. 安装CUDA、CUDNN
+### 3.1 安装cuda-driver
+1. nvidia-smi可以查看目前是否有驱动，如果报错，说明没装，如果是要卸载当前驱动：
+```
+之前通过ppa安装的，卸载如下：
+sudo apt-get remove --purge nvidia*
+以前是通过runfile安装的，卸载如下：
+sudo ./NVIDIA-Linux-x86_64-384.59.run --uninstall
+```
+2. 安装驱动
+```
+sudo apt-get install software-properties-common
+sudo add-apt-repository ppa:graphics-drivers/ppa
+ubuntu-drivers devices （查看NVIDIA显卡型号和推荐的驱动程序的模型）
+sudo apt-get install nvidia-driver-  （输入这个然后按table补全看有哪些选择，选最新或者第二新，或者推荐的那个）
+sudo reboot #重启后生效
+nvidia-smi #如果没报错，则成功
+```
+和驱动配套的cuda版本见[官网](https://docs.nvidia.com/cuda/cuda-toolkit-release-notes/index.html)，记得根据自己想要装的cuda版本配置驱动版本。
 
-
-到最后一步，settings -keyboard -- input sources +号 --添加中文
