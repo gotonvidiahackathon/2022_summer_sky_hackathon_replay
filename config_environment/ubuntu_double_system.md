@@ -74,5 +74,5 @@ sudo apt-get install nvidia-driver-  （输入这个然后按table补全看有�
 sudo reboot #重启后生效
 nvidia-smi #如果没报错，则成功
 ```
-和驱动配套的cuda版本见[官网](https://docs.nvidia.com/cuda/cuda-toolkit-release-notes/index.html)，记得根据自己想要装的cuda版本配置驱动版本。
+&emsp;&emsp;和驱动配套的cuda版本见[官网](https://docs.nvidia.com/cuda/cuda-toolkit-release-notes/index.html)，记得根据自己想要装的cuda版本配置驱动版本。
 
