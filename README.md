@@ -21,6 +21,6 @@
 **ubuntu18.04+cudatoolkit11.0+cudnn8.0+tensorrt7.1**\
 \
 装双系统：
-https://www.jianshu.com/p/08a4f1a36c54\
+https://www.jianshu.com/p/08a4f1a36c54 \
 wsl2：
 ###
