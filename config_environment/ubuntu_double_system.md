@@ -77,6 +77,32 @@ nvidia-smi #如果没报错，则成功
 ```
 
 
-### 3.2 安装cudatoolkit
-进入[官网](https://developer.nvidia.com/cuda-downloads)下载
-1658197101063.jpg
+### 3.2 安装cudatoolkit 11.0
+1. 进入[官网](https://developer.nvidia.com/cuda-downloads)下载runfile，执行Base Installer部分代码，第二行后加一个--override
+![在这里插入图片描述](https://img-blog.csdnimg.cn/cf93746dbfba454fa3f32a9b41370ad6.png)
+```
+wget http://developer.download.nvidia.com/compute/cuda/11.0.2/local_installers/cuda_11.0.2_450.51.05_linux.run
+sudo sh cuda_11.0.2_450.51.05_linux.run --override
+```
+2. continue -- accept
+3. 取消勾选cuda driver，即第一个，用方向键选中后回车取消勾选，再进入下一步
+
+### 3.3 下载cudnn 8.0
+1. 从[官网](https://developer.nvidia.com/rdp/cudnn-archive)下载：“Download cuDNN v8.0.4 (September 28th, 2020), for CUDA 10.1” --> cuDNN Library for Linux (x86)
+2. 解压,将动态链接库和头文件放到cudatoolkit内相应目录
+```
+tar -zxvf cudnn-11.0-linux-x64-v8.0.4.30.tgz
+sudo mv cuda/include/* /usr/local/cuda/include/
+sudo mv cuda/lib64/* /usr/local/cuda/lib64/
+```
+
+3. 加入环境变量
+```
+sudo nano ~/.bashrc 
+#添加这两行
+export LD_LIBRARY_PATH=/usr/local/cuda/lib64
+export PATH=$PATH:/usr/local/cuda/bin
+#ctrl+s  ctrl+x 保存退出
+source ~/.bashrc
+nvcc -V  #显示cuda版本说明安装成功
+```
