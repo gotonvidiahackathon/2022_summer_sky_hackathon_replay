@@ -155,10 +155,9 @@ trtexec #不会报错
 ```
 #polygraphy
 python -m pip install colored polygraphy --extra-index-url https://pypi.ngc.nvidia.com
-#onnxruntime
 
 #onnxruntime 根据官网选择版本 
-https://onnxruntime.ai/docs/execution-providers/CUDA-ExecutionProvider.html
+#https://onnxruntime.ai/docs/execution-providers/CUDA-ExecutionProvider.html
 pip install -i https://pypi.tuna.tsinghua.edu.cn/simple onnxruntime==1.8.0
 pip install -i https://pypi.tuna.tsinghua.edu.cn/simple onnxruntime-gpu==1.8.0
 ```
