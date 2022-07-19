@@ -128,6 +128,25 @@ TensorRT 7.1.3.4 for Ubuntu 18.04 and CUDA 11.0 TAR package
  conda activate trt
  conda install python==3.7
  tar -zxvf TensorRT-7.1.3.4.Ubuntu-18.04.x86_64-gnu.cuda-11.0.cudnn8.0.tar.gz
-cd TensorRT-7.1.3.4/python
+ cd TensorRT-7.1.3.4/python
+ pip install tensorrt-7.1.3.4-cp37-none-linux_x86_64.whl
+ cd ../uff
+ pip install -i https://pypi.tuna.tsinghua.edu.cn/simple  uff- #回车补全
+ cd ../graphsurgeon
+pip install -i https://pypi.tuna.tsinghua.edu.cn/simple gra #回车补全
+cd ../samples
+make
+ ```
+
+3. 添加环境变量
+```
+sudo nano ~/.bashrc
+#末尾添加：
+export LD_LIBRARY_PATH={自己地址}/TensorRT-7.1.3.4/lib${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
+export PATH={自己地址}/TensorRT-7.1.3.4/bin${PATH:+:${PATH}}
+export LD_LIBRARY_PATH={自己地址}/TensorRT-7.1.3.4/lib/:$LD_LIBRARY_PATH
+# ctrl + s -- ctrl +x 保存退出
+source ~/.bashrc
+
 ```
 
