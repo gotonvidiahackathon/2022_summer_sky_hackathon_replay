@@ -111,6 +111,7 @@ nvcc -V  #显示cuda版本说明安装成功
 ```
 wget -c https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh
 sh Miniconda3-latest-Linux-x86_64.sh
+#一路enter yes
 ```
 
 
@@ -119,10 +120,14 @@ sh Miniconda3-latest-Linux-x86_64.sh
 TensorRT 7.1 GA \
 TensorRT 7.1.3.4 for Ubuntu 18.04 and CUDA 11.0 TAR package
 2. 安装\
-可以参考[官网](https://docs.nvidia.com/deeplearning/tensorrt/archives/index.html#trt_7),选择对应版本(TensorRT 7.1.3),选择TensorRT Installation Guide，找到里面用tar file安装步骤，或者如下：
+可以参考[官网](https://docs.nvidia.com/deeplearning/tensorrt/archives/index.html#trt_7),选择对应版本(TensorRT 7.1.3),选择TensorRT Installation Guide，找到里面用tar file安装步骤，或者如下
  
-tar -zxvf TensorRT-7.1.3.4.Ubuntu-18.04.x86_64-gnu.cuda-11.0.cudnn8.0.tar.gz
+ ```
+ #给trt的库放在一个conda虚拟环境
+ conda create -n trt
+ conda activate trt
+ conda install python==3.7
+ tar -zxvf TensorRT-7.1.3.4.Ubuntu-18.04.x86_64-gnu.cuda-11.0.cudnn8.0.tar.gz
 cd TensorRT-7.1.3.4/python
-
-
+```
 
