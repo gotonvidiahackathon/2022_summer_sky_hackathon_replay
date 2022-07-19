@@ -77,3 +77,6 @@ nvidia-smi #如果没报错，则成功
 ```
 
 
+### 3.2 安装cudatoolkit
+进入[官网](https://developer.nvidia.com/cuda-downloads)下载
+1658197101063.jpg
