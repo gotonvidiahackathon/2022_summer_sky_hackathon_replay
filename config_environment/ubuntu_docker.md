@@ -31,3 +31,5 @@ sudo nvidia-docker start -i trt7.1.3
 # ctrl + s -- ctrl + b 保存退出
 # 以后只要进入trt7.1.3文件夹后 sh docker.sh 就能进入docker
 ```
+
+8.进入docker后，根据**config_environment\sky黑客松-知识图谱-2022q2.pdf**安装后续环境

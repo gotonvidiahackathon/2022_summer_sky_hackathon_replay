@@ -22,7 +22,7 @@ by 宋尧哲
 4. **第五页**，安装类型选择最后一个else。
 5. **开始给每个区分配大小**，可以看到有一个free space空间，就是之前windows系统中预留的给Ubuntu安装的空间。参考[这篇博客](https://blog.csdn.net/baidu_36602427/article/details/86548203)进行分配空间，**注意：**\
 1). /boot最后装，不然可能会bug\
-2). /home倒数第二装，给/boot留1024M空间就行。\
+2). /home倒数第二装，给/boot留1024M空间就行; /var是后面docker容器下载镜像的默认路径，不要太小，给个20G吧。
 3). 如果是重装Ubuntu（之前电脑就有一个），记得勾选format保险起见\
 4). 不想更改数据的盘不要动。
 ### 2.3 安装好之后一些基础配置
@@ -162,3 +162,5 @@ pip install -i https://pypi.tuna.tsinghua.edu.cn/simple onnxruntime==1.8.0
 pip install -i https://pypi.tuna.tsinghua.edu.cn/simple onnxruntime-gpu==1.8.0
 ```
 
+
+## 6.根据**config_environment\sky黑客松-知识图谱-2022q2.pdf**安装后续环境
