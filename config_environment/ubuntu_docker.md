@@ -17,7 +17,7 @@ sudo docker pull nvcr.io/nvidia/tensorrt:20.08-py3
 6. 拉取后本地创建一个文件夹对docker进行绑定
 ```
 mkdir trt7.1.3
-nvidia-docker run -it --name trt7.1.3 -v ~/trt7.1.3:/target nvcr.io/nvidia/tensorrt:20.08-py3
+nvidia-docker run -it --name trt7.1.3 -v ~/trt7.1.3:/target nvcr.io/nvidia/tensorrt:20.08-py3 #报错的话可以换成docker run ...
 pip list #可以看到tensorRT版本是7.1.3.4
 ```
 7. 不是第一次进入，需要简化一下。
