@@ -166,3 +166,9 @@ pip install -i https://pypi.tuna.tsinghua.edu.cn/simple onnxruntime-gpu==1.8.0
 https://blog.csdn.net/blueblood7/article/details/117419608
 
 ## 6.根据**config_environment\sky黑客松-知识图谱-2022q2.pdf**安装后续环境
+
+
+
+
+# 安装opencv：
+https://cloud.tencent.com/developer/beta/article/1657529
